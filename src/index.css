@@ -2,95 +2,96 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 225 30% 96%;
+    --foreground: 222 84% 5%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 222 84% 5%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 222 84% 5%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 145 63% 42%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 210 100% 50%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Theme Colors - GMapk Style */
+    --color-primary: 210 100% 50%;
+    --color-primary-deep: 210 100% 50%;
+    --color-bg: 225 30% 96%;
+    
+    --color-blue-from: 214 100% 75%;
+    --color-blue-to: 210 100% 50%;
+    
+    --color-red-from: 20 100% 76%;
+    --color-red-to: 11 100% 50%;
+    
+    --color-purple-from: 280 100% 76%;
+    --color-purple-to: 276 100% 50%;
+    
+    --color-orange-from: 35 100% 76%;
+    --color-orange-to: 36 100% 50%;
+    
+    --color-green-from: 110 100% 41%;
+    --color-green-to: 113 100% 38%;
+    
+    --color-navy: 210 100% 50%;
+    --color-mod: 0 100% 50%;
+    --color-update: 210 100% 50%;
+    --color-rates: 51 100% 50%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 210 50% 10%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 210 50% 15%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 210 50% 15%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 145 63% 42%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 217 33% 18%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 213 27% 84%;
+    
+    --color-bg: 210 50% 10%;
   }
 }
 
@@ -100,6 +101,148 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
   }
+}
+
+@layer components {
+  /* Gradient backgrounds */
+  .gradient-blue {
+    background: linear-gradient(135deg, hsl(var(--color-blue-from)), hsl(var(--color-blue-to)));
+  }
+  
+  .gradient-red {
+    background: linear-gradient(135deg, hsl(var(--color-red-from)), hsl(var(--color-red-to)));
+  }
+  
+  .gradient-purple {
+    background: linear-gradient(135deg, hsl(var(--color-purple-from)), hsl(var(--color-purple-to)));
+  }
+  
+  .gradient-orange {
+    background: linear-gradient(135deg, hsl(var(--color-orange-from)), hsl(var(--color-orange-to)));
+  }
+  
+  .gradient-green {
+    background: linear-gradient(135deg, hsl(var(--color-green-from)), hsl(var(--color-green-to)));
+  }
+
+  /* Navy button */
+  .btn-navy {
+    @apply px-3 py-2 rounded-lg text-white text-sm font-medium transition-all;
+    background-color: hsl(var(--color-navy));
+  }
+  
+  .btn-navy:hover {
+    opacity: 0.9;
+  }
+
+  /* Section heading */
+  .section-head {
+    @apply flex justify-between items-center mb-6 text-foreground font-bold;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  /* Post item card */
+  .post-item {
+    @apply relative overflow-hidden;
+  }
+
+  /* Category pills */
+  .category-pill {
+    @apply px-3 py-2 text-xs rounded font-medium transition m-1 inline-block;
+  }
+  
+  .category-pill-green {
+    @apply category-pill bg-secondary text-white;
+  }
+
+  /* Status badges */
+  .status-badge {
+    @apply absolute left-2.5 top-2 text-[11px] uppercase block rounded-full px-2 py-1 z-10 font-semibold;
+  }
+  
+  .status-update {
+    @apply status-badge text-primary bg-white/50 dark:bg-card/50;
+  }
+
+  /* Mod label */
+  .mod-label {
+    @apply absolute left-1/2 -bottom-3 -translate-x-1/2 shadow text-[11px] uppercase block rounded-full px-2 py-1 z-10 text-white font-semibold;
+    background: linear-gradient(135deg, hsl(var(--color-red-from)), hsl(var(--color-red-to)));
+  }
+
+  /* Download button */
+  .download-btn {
+    @apply bg-white rounded-[20px] inline-flex items-center text-gray-800 font-semibold py-4 px-6 text-lg transition-all hover:text-white;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .download-btn:hover {
+    background: linear-gradient(135deg, hsl(var(--color-blue-from)), hsl(var(--color-blue-to)));
+  }
+
+  /* Hero carousel slide */
+  .hero-slide {
+    @apply rounded-[30px] bg-cover bg-no-repeat bg-center p-5;
+    background-color: hsl(var(--muted));
+  }
+
+  /* Bottom navigation */
+  .bottom-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-card border-t border-border z-50;
+  }
+  
+  .bottom-nav-item {
+    @apply flex flex-col items-center justify-center py-2 px-3 text-muted-foreground transition-colors;
+  }
+  
+  .bottom-nav-item:hover,
+  .bottom-nav-item.active {
+    @apply text-primary;
+  }
+
+  /* Dark mode toggle */
+  .dark-mode-toggle {
+    @apply p-2 rounded-full transition-all cursor-pointer;
+    background: linear-gradient(135deg, hsl(var(--color-orange-from)), hsl(var(--color-orange-to)));
+  }
+
+  /* Font families */
+  .font-kanit {
+    font-family: 'Kanit', sans-serif;
+  }
+  
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Smooth transition for dark mode */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
 }
